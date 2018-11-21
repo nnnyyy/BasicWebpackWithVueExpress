@@ -4,6 +4,9 @@
 import './css/style.css'
 import Vue from 'vue'
 import App from './App.vue'
+import Global from './global.js'
+
+new Global();
 
 new Vue({
     el: '#app',

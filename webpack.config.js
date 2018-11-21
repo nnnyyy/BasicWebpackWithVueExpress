@@ -35,6 +35,7 @@ const babelLoader = {
 const config = {
     context: path.join(__dirname, "src"),
     entry: "./main.js",
+    devtool: 'inline-source-map',
     devServer: devServerConfig,
     module: {
         rules: [

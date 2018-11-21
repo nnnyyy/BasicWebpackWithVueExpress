@@ -13,19 +13,24 @@ const devServerConfig = {
     proxy: {
         "**": "http://127.0.0.1:3000"
     }
-}
+};
+
+const cssLoader = {
+    test: /\.css$/,
+    use: ['style-loader', 'css-loader']
+};
 
 const vueLoader = {
     test: /\.vue$/,
     loader: 'vue-loader',
     include: [ path.join(__dirname,"src"), path.join(__dirname, 'node_modules/webpack-dev-server/client') ]
-}
+};
 
 const babelLoader = {
     test: /\.js$/,
     loader: 'babel-loader',
     include: [ path.join(__dirname,"src"), path.join(__dirname, 'node_modules/webpack-dev-server/client') ]
-}
+};
 
 const config = {
     context: path.join(__dirname, "src"),
@@ -33,6 +38,7 @@ const config = {
     devServer: devServerConfig,
     module: {
         rules: [
+            cssLoader,
             vueLoader,
             babelLoader
         ]

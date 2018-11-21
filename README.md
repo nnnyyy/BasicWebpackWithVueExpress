@@ -1,6 +1,12 @@
 # BasicWebpackWithVueExpress
 웹팩 + Vue + Express 의 가장 단순하고 기본적인 개발 구성.
 
+### 포함 된 로더 
+> ##### style-loader
+> ##### css-loader
+> ##### vue-loader
+> ##### babel-loader
+
 ### 설치
 > npm install
 
